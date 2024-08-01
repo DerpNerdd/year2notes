@@ -1,0 +1,4 @@
+Why start with ARRAYS
+This is because they are required and pivotal in every website, database, web applications...etc
+For our immediate use Arrays are required to easily pupulate websites
+
