@@ -6,3 +6,6 @@ Ternaries
 This is just a quick reminder about how ternaries work, think of them as small if statements
 {conditional ? truePath : falsePath}
 
+The spread Operator
+The spread operator (...) will iterate through and add all values from an array-like object
+Book Version 2 will have all the same values but we changed pages to 140 and added an author property
