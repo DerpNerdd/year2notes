@@ -18,8 +18,32 @@ Other method such as forEach() do not create new arrays and instead just paste c
 
 
 Anatomy of .map()
+
 let newArray = people.map((person) => {})
 The first part of a map method is a variable name that will represent each item from your array
 This variable name shoulld be named as the singular or the array
     people => person
     books => book
+
+let newArray = people.map((person) => {
+    const {name, age, job, shirtColor, drink, pet} = person;
+})
+Next you can destructure your item if you like, this is not required but does make the setup easier
+
+let newArray = people.map((person) => {
+    const {name, age, job, shirtColor, drink, pet} = person;
+    return {...person, shirtColor: 'tie-dye', isNice: 'yes'};
+})
+Lastly you need to return the object back from the map.
+
+.forEach()
+forEach doesn't return an array as an output.
+You have 3 value that you can use to work with:
+    value
+    index
+    array (the entire thing)
+The last export of a forEach loop is 'undefined' this really messes with returning values
+Instead you can have an conditional that acts depending on the values returned
+    Counting occurrences
+    Breaking up the array into smaller arrays
+    Printing out every name that starts with A
