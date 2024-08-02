@@ -9,3 +9,17 @@ This is just a quick reminder about how ternaries work, think of them as small i
 The spread Operator
 The spread operator (...) will iterate through and add all values from an array-like object
 Book Version 2 will have all the same values but we changed pages to 140 and added an author property
+
+Mapping Arrays
+When you have an array with several items that you want to break down the best way is .map()
+.map() is an array method that will go through each of the items and do a thing
+The nice part of .map() is that it returns a whole new array when it's finished
+Other method such as forEach() do not create new arrays and instead just paste content for the existing array
+
+
+Anatomy of .map()
+let newArray = people.map((person) => {})
+The first part of a map method is a variable name that will represent each item from your array
+This variable name shoulld be named as the singular or the array
+    people => person
+    books => book
