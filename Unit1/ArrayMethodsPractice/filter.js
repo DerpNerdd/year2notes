@@ -4,3 +4,4 @@ console.log(numbers.filter((number) =>{
     return number > 50 & number < 2000
 })
 )
+
