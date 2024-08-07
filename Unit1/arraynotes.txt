@@ -51,3 +51,38 @@ Instead you can have an conditional that acts depending on the values returned
 .filter()
 Filter is how you can remove certain items from your array
 It will go through each item and compare them to a conditional that you set up, true gets added and false does not
+
+.every()
+const numbers = [-1, -2, 20, 40, 50]
+console.log(
+    numbers.every((num) => num < 100)
+);
+This checks to make sure that EVERY value meets the condition
+
+.some()
+This is very similar to .every() but instead of checking all it checks in there if any of them are true
+As long as one is true this will return a true statement 
+
+.reduce()
+reduce() is a method that adds to an output, it finds the accumulation of numbers
+This does nothing for non-number values, this is very useful for creating updated numbers of items
+    Items in your cart 
+    Money reaised by the class
+
+.reduce() parameters
+const array = [2, 4, 6, 8, 10]
+array.reduce((accumulator, currentValue, currentIndex, array) => {
+    return accumulator + currentValue
+}, 20)
+
+Reduce has a lot going on there are 5 things that you can use:
+    Total is a variable that is automatically returned when the method ends
+
+You can use nicnkames like total, current, index, and arr, but the order matters
+Current is a variable referring to value currently being looked at 
+You can choose how this number will affect the total (here it is added)
+Next is index and array, these are both optional if you don't need them
+Index tells you the index of the current number
+arr returns the entire array you are working on 
+Lastly is the optional staring value
+This is outside of the callback function and sets the total value so that you can start at any value
