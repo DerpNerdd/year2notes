@@ -1,0 +1,44 @@
+Agile Development - How to be a better developer
+
+Agile Intro
+
+    This is a specific form of development and is currently the most used version across the world
+    As the name implies this is a form of development that is flexible so that it can be used for any project
+    This form of development focuses very heavily on the user experience and client collaboration
+
+Agile values:
+
+Individuals and Interactions
+    Instead of just focusing on the project and what needs to be done you can focus on the team and how they do it
+    If you have a happy team and they are all working together very well then the product will turn out better
+    This also goes with the client, if you have a good relationship with the customer the project has a better chance for success
+
+Working Software
+    While testing and creating your project you should make it avaliable to everyone
+    Many older companies would spend their time creating rendered images of the site and typing up instructions on how to use the site
+    You should instead have it up so that people can see and use it while push out consistent updates
+
+Customer collaboration
+    By keeping constant communication with the client and customers you can ensure that you are creating what they want to recieve and what will be best for the users
+    This will also avoid large changes or unfortunate miscommunications at the end of the project
+
+Responding to change
+    Unlike other forms of design, agile is based around the idea that at any point the entire project and scope can change
+    People's needs, modern design, software, and the team you are working with change constantly and your project needs to be able to change with all of that
+
+The Agile Principles
+
+These are 12 commandments while working on your SDLC and you better believe this will be on your test in some capacity
+
+1. Your highest priority is to satisfy the customer through early and continuous delivery of valuable software
+2. Welcome changing requirements, even late in development. Agile processes harness change for the customer's competitive advantage
+3. Deliver working software frequently, from a couple of weeks to a couple of month, and as needed
+4. Business people and developers must work together daily throughout the project
+5. Build projects arounf motivated individuals. Give them the enviornment and support they need, and trust them to get the job done
+6. The most efficient and effective method of conveying information to and within a development team is face-to-face coversion
+7. Working software is the primary measure of progress
+8. Agile Processes promote sustainable development. The sponsors, developers, and users should be able to maintain a constant pace indefinetely
+9. Continous attention to technical excellence and good design enhances agility
+10.
+11.
+12.
