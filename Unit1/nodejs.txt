@@ -152,3 +152,11 @@ We are going to focus on the required one called .end that ends the respone proc
 Promises 
 Promises are a special object that holds information about the values received but also whether or not the operation is finished
 Promises are asynchronous so we can use them to run code and then we can force the rest of the code to wait on the promise
+Async/Await are a way that we can use promises  
+await is a keyword telling us that we are going to wait for the promise to finish and return information
+Not everything has a promise on it, fetch is a promise by default but things like large math problems are not promises
+Promises are objects so we set them up like any other new object
+    const getText = (path) => {}
+return new Promise((resole, reject) => {})
+Promises have always been very important for JS and other async languages
+We are going to see 3 ways to handle promises but please only use async / awaid in the future
