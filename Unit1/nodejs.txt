@@ -54,3 +54,41 @@ Built-In Modules
 There are a lot of built in modules that are useful for different programs
 We are going to be using 4 main ones but you can find more int he docs if you want to make your own projects
 https://node.js.org/api/documentation.html
+
+OS Module
+The OS module is used to return information on the computer and system information on the PC
+const os = require(‘os’)
+
+Path Module
+The Path module is used for navigating the directions and file paths
+This also includes methods that will clean up paths to avoid errors
+const path = require(‘path’)
+
+FS Module (File System)
+The file system module is extensive and allows interaction between your code and the files on the PC
+This has methods to allow reasons, writing, clearing, and combining files (and so much more…)
+Because it is so extensive we only import what we need
+const {readFileSync, writeFileSync} = require(‘fs’)
+
+HTTP Module
+HTTP is all about servers and internet protocol
+This library truncates a lot of difficult code into simpler methods and never buffers requests or response, allowing users to stream data
+const http = require(‘http’)
+
+Nodemon
+Nodemon is a dev dependency that we use to help with node server development
+If you ever update any files on a server, then you need to stop and restart the server to load those settings
+Nodemon lets us do it automatically
+
+devDependencies
+Nodemon is a library that is not not needed for the end user, so loading it on the server would waste space for no reason
+Dependencies only used for creating the application are devDependencies
+To install dependencies into the dev only space, we use devDependencies
+npm i nodemon -d
+
+
+-tion
+
+Event Loop
+The event loop is a key part of how the browser works with async functions and callbacks
+It’s very hard to explain all this, but some guy named Philip Roberts does a great job
