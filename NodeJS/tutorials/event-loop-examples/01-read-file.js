@@ -11,3 +11,5 @@ readFile('../content/first.txt', 'utf8', (err, result) => {
     console.log('Finished the first task')
 })
 console.log('Starting the second task')
+
+//THIS IS ASYNCHRONOUS
