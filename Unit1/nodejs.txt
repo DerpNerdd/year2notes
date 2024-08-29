@@ -87,8 +87,53 @@ To install dependencies into the dev only space, we use devDependencies
 npm i nodemon -d
 
 
--tion
+
+NPM Scripts
+If you look into your package.json, you will also see a scripts object
+We have been using this in react without even knowing it you may recognize the commands listed
+"scripts": {
+    "start": "react-scripts start",
+    "build": "CI= react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  }
+
+
+Custom Scripts
+React builds default scripts that we have been using, but you are able to define your own scripts
+Here’s one for nodemon
+"scripts": {
+    "start": "nodemon"
+  }
+
+Asynchronous vs. Synchronous
+Asynchronous
+Non-blocking architecture
+Execution of one task isn’t dependent on another
+Tasks can run simultaneously
+Synchronous
+Blocking architecture
+Execution of each operation depends on completing the one before it
+Each tasks requires an answer before moving onto the next iteration
 
 Event Loop
 The event loop is a key part of how the browser works with async functions and callbacks
 It’s very hard to explain all this, but some guy named Philip Roberts does a great job
+
+Hypertext Transfer protocol
+HTTP is how we send information from a browser of URL to a server
+HTTP is typical way that users ask for information from a server and that is called a request
+
+HTTP Module
+Node is excellent at server setup and request handling, this is done through the http module
+Here we have methods like http.createServer() that allow us to easily create a new server
+
+createServer
+http.createServer() takes in a call back function with 2 parameters, 1 for requests and 1 for response 
+    const server = http.createServer((req, res) =>{}) 
+
+Req and Res  
+Req is an object represents the HTTP request, typically done through the URL but also through things like fetch()
+Res is the respone, or what the server returns to the user to use 
+    const server = http.createServer((req, res) =>{}) 
+
