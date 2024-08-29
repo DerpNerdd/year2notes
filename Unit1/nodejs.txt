@@ -137,3 +137,8 @@ Req is an object represents the HTTP request, typically done through the URL but
 Res is the respone, or what the server returns to the user to use 
     const server = http.createServer((req, res) =>{}) 
 
+The request object
+There is a lot of information stored in the request object, including url, header, and parameters
+We are going to start with the url to get the location of the page we are querying
+    if (req.url === "/"){}
+
