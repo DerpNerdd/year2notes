@@ -148,3 +148,7 @@ We are going to focus on the required one called .end that ends the respone proc
 
     res.end("Welcome to our home page");
     else { res.status(404).end();}
+
+Promises 
+Promises are a special object that holds information about the values received but also whether or not the operation is finished
+Promises are asynchronous so we can use them to run code and then we can force the rest of the code to wait on the promise
