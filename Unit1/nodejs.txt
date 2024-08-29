@@ -142,3 +142,9 @@ There is a lot of information stored in the request object, including url, heade
 We are going to start with the url to get the location of the page we are querying
     if (req.url === "/"){}
 
+The respone object
+The respone object has a ton of information as well, including format, json, and download
+We are going to focus on the required one called .end that ends the respone process
+
+    res.end("Welcome to our home page");
+    else { res.status(404).end();}
