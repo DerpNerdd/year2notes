@@ -160,3 +160,34 @@ Promises are objects so we set them up like any other new object
 return new Promise((resole, reject) => {})
 Promises have always been very important for JS and other async languages
 We are going to see 3 ways to handle promises but please only use async / awaid in the future
+
+Events
+Events are triggered by user input, just like js or html events like onClick()
+Node uses events very often building modules that handle changes on the page
+In node events are built off of a singular module called he event emitter
+This module takes in some kind of request and gives back something depending on the parameters
+The common events are requests and we use a method called '.on()' for that
+Any other module that extends events is also avaliable to use the 'on()' for example the HTTP servers
+
+File System Flags
+When creating files sequentially we need to tell node how we want the data exported, i.e. overwrite, append, create only if it doesn't exist etc...
+Here are a few common flags:
+w
+    Open file for writing (overwrites the file)
+a 
+    Open file for appending (adds to end of file)
+r 
+    open file for reading (you can't change the file when you use the flag)
+
+Streams
+You have likely heard of streaming tv, movies, and music to your phone or PC
+Streams in Node JS, enabling efficient data handling by reading or writing input and output sequentially
+We only load 64 kbps (kilobites per second) of information at a time so that we can enjoy the loaded part while the rest is loading
+
+Streaming Options
+Just like fs option with flags, there are options with streaming as well. Two highly use options are:
+highWaterMark
+    Tells the stream how many bytes should be in each chunk
+Encoding
+    Defines the language, 'utf8' for example
+
