@@ -1,24 +1,39 @@
-const {readFile, writeFile, readFileSync, writeFileSync, read, write} = require('fs')
-const path = require('path')
-console.log("Winter is Boring")
+const {readFile, writeFile, readFileSync, writeFileSync} = require('fs');
 
-// readFile and writeFIle are asynchronous, allowing for the program to continue execution until the other process has completed 
+// //Asynchronous read and write example
+// readFile('./content/big.txt', 'utf8', (err, firstData) => {
+//     if(err){
+//         console.error(err);
+//         return
+//     }
+//     readFile('./content/second.txt', 'utf8', (err, secondData) => {
+//         if(err){
+//             console.error(err);
+//             return
+//         }
+//         const result = `${firstData} and ${secondData}`;
+//         writeFile('./content/result-mind-grenade.txt', result, (err) =>{
+//             if(err){
+//                 console.error(err);
+//                 return
+//             }
+//             console.log("Asynchronous write completed successfully")
+//         })
+//     })
+// })
 
-// readSync and writeSync are syncronous, and will stop to execute the process before executing the rest of the code
+// for (let index = 0; index < 100000; index++) {
+//     console.log("Testing Server...")
+// }
 
-readFile(path.join(__dirname, '/content/first.txt'), 'utf8', (err, result) => {
-    if(err) {
-        console.log(err)
-        return
+try{
+    const firstData = readFileSync('./content/first.txt', 'utf8')
+    for (let index = 0; index < 10000; index++){
+        console.log("Testing Server...")
     }
-    const first = result
-    console.log(first)
-    readFile(path.join(__dirname, '/content/first.txt'), 'utf8', (err, result) => {
-        if(err) {
-            console.log(err)
-            return
-        }
-        const second = result
-        console.log(second)
-    })
-})
+    const secondData = readFileSync('./content/second.txt', 'utf8')
+    const result = `${firstData} and ${secondData}`;
+    writeFileSync('./content/result-mind-grenade.txt', result)
+} catch (err){
+    console.error(err)
+}
