@@ -191,3 +191,66 @@ highWaterMark
 Encoding
     Defines the language, 'utf8' for example
 
+Servers
+Servers are computers, I know they sound more advanced and technical, but they are a computer just like your laptop
+The only difference is that a server is meant to stay on and always have the resources they are carrying avaliable
+
+HTTP Request Cycle
+Urls are an address to the server where the information is stored
+Think of it like a house and you need to send a letter to ask for something, you cant do that without knowing the address
+The url holds a lot of information, where to go and what to ask for
+The server waits for this HTTP request and then HTTP responds with the corresponding data if avaliable
+
+Request Messages
+A request message has 4 parts 
+A method
+    GET, PUT, POST, DELETE
+A URL
+    The address to go to
+Headers
+    The options that you request carriers 
+Body
+    Any other relevant information needed 
+
+Request methods
+Get 
+    Reads Data 
+Post
+    Creates Data 
+Put 
+    Updates Data 
+Delete
+    Deletes Data 
+
+Headers (optional)
+Headers is an object that is filled with key value pairs describing the request for example:
+    CORS: no-cors 
+    Referrer: google.com/ 
+    Pragma: no-cache 
+
+Body or Payload (optional)
+This is the content that you are depositing on to the server if you are running a PUT or POST request 
+This is totally optional and the user cant do this with a url request, you would need to set up this command using a form or something
+
+Response Messages
+This is very similar to the request message
+Status code
+    200, 404, 500, etc. tells the user the status
+Status text
+    Describes the code, OK or Page not found
+Headers
+    Details about the data and server 
+Body
+    The content they want, HTML, JSON, etc.
+
+Server Status Codes
+100's - Information 
+    This is a preliminary response, typically used to let the client know that their request was received and to wait
+200's - Success
+    This is a success, there are a lot of codes in the 200 but all of them are just different types of successes
+300's - Redirect
+    These are redirection, this is typically placed in the console for the dev to handle deprecations. For example 301 is moved permanently and the dev displays the new URL
+400's - Client errors
+    This is used when the error seems to be cause by the client and not the server itself
+500's - Server errors
+    These are reserved for when something goes wrong in the server's code, infinite loops, missing methods, etc. 
