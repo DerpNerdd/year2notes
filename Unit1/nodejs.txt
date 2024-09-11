@@ -254,3 +254,24 @@ Server Status Codes
     This is used when the error seems to be cause by the client and not the server itself
 500's - Server errors
     These are reserved for when something goes wrong in the server's code, infinite loops, missing methods, etc. 
+
+Networks
+If you Click on the headers tab you can see the information about the headers, url, method, status, etc.
+There is a lot more information on this page if you want to look around but I'll leave it to you to explore these features
+
+MIME types
+Mime types tell the browser how to encode the information that it is repsonding with
+Some well known ones are text, JSON, CSS, html. Look them up in MDN for more.
+
+Express 101
+When a page is created on a server any links on that page, including images and css, are individually requested from the server
+If you try to load css without a route created in the node app then it will 404 and fail
+Instead of creating all of these request routes we can use express to serve up an entire directory with a simple call
+Node is a space to code js outside of the browser, express is a library for creating servers in that space 
+
+Express 102
+In order to use Express you need to install it using 'npm i express'
+Then you need to initialize the express app using
+    const express = require('express)
+    const app = express()
+
