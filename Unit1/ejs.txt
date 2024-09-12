@@ -1,0 +1,66 @@
+EJS to template your Node.js
+
+The need
+If you are writing a backend application in Node.js and you want to send HTML back to the clients interacting with it, then you must find a way to "mix in", or interpolate, the processed data into the HTMl files you are sending
+
+For simple data interpolation and testing purposes, one way to do this is by concantenating HTMl strings with data or using the template strings in JavaScript as we have been doing. But if you want to write applications with significant HTML code and dynamic content, you are better off using tools that are designed for that purpose, like template engines.
+
+EJS (Embedded JavaScript Templating) is one of the most popular template engines for JavaScript. As the name suggests, it lets us embed JavaScript code in a template language that is then used to generate HTML.
+
+In this article, I will walk you through a detailed guide to templating your Node application with EJS. First, we'll cover the basics of template engines and setting up EJS, but we will move on to a more advanced guide to using EJS in your Node apps.
+
+How does a template engine works
+Template Engine: A template engine is software designed to combine templates with a data model to produce, in out case, real HTMl code
+
+Template engines handle the tast of interpolating data into HTML code while providing some features (like partials in EJS) that would have been difficult to replicate by concentrating strings.
+
+Understanding a little more
+As mentioned earlier, EJS is one of the most popular template engines for JavaScript. One of the reasons to choose it is that EJS code looks like pure HTML.
+
+It retains the syntax of HTML while allowing data interpolation, unlike Pug (another template engine) which uses a different syntax with indentation and spaces.
+
+EJS files are saved with the .ejs file extension.
+
+Getting Started
+Let's start a project from scratch. Create a new folder where you want to put the project files.
+
+Initialize a new Node project in the folder by running npm init -y in the terminal, then to install Express and EJS, run:
+
+npm install -S express ejs express-session
+
+After installation create an app.js file and a views folder in the root folder. Inside the views folder, create two folders pages and partials; I will be explaining why we need these folders shortly.
+
+How it works
+Now, let's walk through some part of the code and udnerstand what is going on.
+
+app.set('view engine', 'ejs'); is self explanatory. We are setting EJS as the express app vew engine. By default, Express will look inside of a views folder when resolving the template files, which is whjy we had to create a views folder
+
+In res.render('pages/index'), we are calling the render method on the response object. This renders the view provided (pages/index in this case) and sends back the rendered HTML string to the client
+
+Note that we didn't have to provide the file extension because Express resolves it automatically; it knows the view engine we are using from app.set('view engine', 'ejs'). We also didnt have to write the path as views/pages/index because the views folder is used by default.
+
+Goals
+
+Our aim is to combine data with templates. We can do that by passing a second argument to res.render. This second argument must be an object, which will be accessible in the EJS template file.
+
+EJS syntax
+You have just seen the basic syntax of EJS. The syntax follows as such:
+
+<statingTag content closingTag>
+
+This is the syntax of <%= user.firstName %>
+
+EJS has different tags for different purposes. This start tag <%= is called the "escape output" tag because if the string in the content has forbidden characters like > and &, the characters will be escaped (replaced by HTTML codes) in the output string
+
+Coding in EJS
+In EJS the tag <% that can contain logic (called a "scriplet") as its content. Any javascript syntax can be used in this tag.
+
+What Should Happen
+If you run the app, you will see the paragraph in the if statement displated. Change admin:false in the user object, and the paragraph won't be displayed.
+
+Take note of the syntax of the scriplet <%*if*(user.admin) { %>. The opening { is captured between start and close tags, and the closing } in seperate start and close tags
+
+What we did
+We passed articles which is an array of post objects containing a title and a body to the articles.ejs template. Then, in the template, we loop through the array using forEach to render each post object as a list item.
+
+Notice that the article variable that references each item of the array on each iteration of the loop <% articles.forEach((article)=> {%> is accessible in other portions of the template code until we reach the end of the closing brackets <%}) %>
