@@ -41,3 +41,24 @@ HTTP Headers:
 HTTP Headers are writen on a message to provide the reciepent with information about the request, the sender and the way in which the sender wants to communicate with the server/recipient 
 Ex. { 'Content-Type': 'text/html', 'Content-Length': 1234, 'ETag': '33a64df551} others include- host, user-agent...etc
 */
+
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.get('/', (req, res) => {
+    console.log(req.url)
+
+    res.sendFile(path.join(__dirname, '/public/index.html'));
+})
+
+app.post('/', (req, res) => {
+    console.log(req.url)
+    res.status(404).send('You know you dont post on the index Right?')
+})
+
+app.get('*', (req, res) => {
+    res.status(404).send('404 Page Not Found')
+})
+
+app.listen(port, () => {
+    console.log(`Server is running on port ${port}`)
+})

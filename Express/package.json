@@ -4,7 +4,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon 01-express-basics.js"
+    "dev": "nodemon 04-params-query.js"
   },
   "author": "Alan Sanchez",
   "license": "MTI",
