@@ -4,7 +4,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon 04-params-query.js"
+    "dev": "nodemon 06-middleware-use.js"
   },
   "author": "Alan Sanchez",
   "license": "MTI",
