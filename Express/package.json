@@ -1,13 +1,14 @@
 {
   "name": "express",
   "version": "1.0.0",
-  "main": "app.js",
+  "main": "01-express-app.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon 07-middleware-options.js"
+    "start": "node app.js",
+    "dev": "nodemon 08-middleware-methods.js"
   },
-  "author": "Alan Sanchez",
-  "license": "MTI",
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
   "description": "",
   "dependencies": {
     "axios": "^1.7.7",
