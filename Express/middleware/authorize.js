@@ -3,7 +3,7 @@ const authorize = (req, res, next) => {
 This is just a small example for */
 
 
-    const { apikey } = req.params;
+    const { apikey } = req.query;
     if (apikey === 'ping') {
         console.log('Authorized Access Granted')
         //This modifies the request for the next respone
@@ -13,3 +13,5 @@ This is just a small example for */
         res.status(401).send('Unauthorized');
     }
 }
+
+module.exports = authorize;

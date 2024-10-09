@@ -4,7 +4,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon 06-middleware-use.js"
+    "dev": "nodemon 07-middleware-options.js"
   },
   "author": "Alan Sanchez",
   "license": "MTI",
