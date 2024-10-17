@@ -275,3 +275,52 @@ Then you need to initialize the express app using
     const express = require('express)
     const app = express()
 
+Method POST 
+Post is a method that allows us to create new data, that data is passed through the body of the request
+This is extremely similar to the get with a req and a res, it is even able to return an HTML
+
+express.urlencoded
+Information passed through the body of a request is a bit confusing for the server
+Data must be parsed by content type and sometimes that is't clearly defined
+Express has released it's own version of body-parser (an old library to handle encoding) called urlencoded
+This middleware will take the req.body and decoded the values to be strings or arrays
+
+~~ DOES NOT RECOGNIZE OBJECTS ~~
+
+express.json
+This is the complimentary middleware to urlencoded that will recognize objects
+This will also parse the data into a JSON for easy use in the response.
+
+urlencoded() and json()
+These two middlewares are required for put and post methods since the data is always passed to the server as encoded information
+
+PUT method
+Put is used to update existing values
+Put methods require 2 parameters, what you want to change and what it will be changed to
+
+DELETE method
+Delete removes a value from your data
+All we need is a param to let us know which object we want to remove from the database
+
+Express Router
+Express router is used to reduce the amount of routes that you need to type into your main server file
+You instead create your routs with your multiple methods in one file and then app.use that router file
+
+express.Router()
+Instead of creating an app we can create a router in the same way allowing us to create the pathing in a different file
+
+const router = express.Router()
+
+router.method()
+When using routers you create them just like the app using the .methods(path, CB)
+router.get("/", (req, res) => {});
+
+Using a Router
+Once you have created your routes you need to export it from the router and import it into the server file
+Then you app.use the route with the path
+app.use('/api/people', people)
+
+Controllers
+Controllers are created to deal with functions and are then passed to the router
+This is the final step in creating clean, easy to navigate code for a server
+Since the controller will handle the req, res callback function we can now nicely arrange our routes into easy to read methods
