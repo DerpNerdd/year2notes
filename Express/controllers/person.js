@@ -37,4 +37,18 @@ const updatePeople = (req, res) => {
     })
 }
 
+const deletePerson = (req, res) => {
+    const {id} = req.params;
+    const person = people.find((person) => person.id === Number(id));
+    
+    if(!person){
+        return res.status(404).json({success: false, msg: "Person not found"})
+    }
+
+    people = people.filter((person_ =>{
+        return person.id!== Number(id);
+    }))
+    res.status(200).json({success: true, data: people})
+}
+
 module.exports = {createPeople, readPeople, updatePeople, deletePerson }

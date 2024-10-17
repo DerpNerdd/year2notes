@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 
-const personRouter = require('./routes/people-router');
+const personRouter = require('./routes/people-controller');
 
 app.use(express.urlencoded({ extended: false }));
 app.use('/people', personRouter);
