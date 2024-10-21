@@ -1,0 +1,77 @@
+MongoDB 101
+Mongo is a non-relational database
+There are pros and cons to all the different types of databases but the biggest for us is the use of JSONs
+
+MongoDB 102
+Instead of tables we have collections with are big datasets
+Instead of rows we have documents which are accessed using key value pairs like a normal JSON
+
+Hosting
+MongoDB can be hosted from a local machine if you want but there is a free alternative named "Atlas"
+Atlas is created by the same team that created MongoDB
+
+Allowing users
+Once the database is up and running then you need to whitelist users
+On the left you will see a tab named Database access, click it and then adda new database user
+This is just for you right now, if anyone else accesses this db they will do it using your credentials
+Please add your name and generate a secure password and press add user
+
+Network access
+On the left you will see network access
+You can choose to add only your IP address but we are going to allow access from anywhere and press confirm
+
+Creating Your First DB
+On the left click Databases and then click on the collections tab
+Then click on create own data, name the database Store and the collection products
+Once you made you can click on the connect button and find the link to your DB
+Please copy this string into your project, use the Db folder to hold it
+
+Adding documents
+Now that we have a collection you can insert a document by clicking the button
+You can add any amount of documents that you want but every document in a colelction should have the EXACT same layout
+
+Mongoose
+Mongoose is an alternative to the mongoDB API and is used more often for its convenience
+Mongoose has a built in object modeling API that ensures that all posted documents are exactly the same
+
+dotenv
+Another library, this one loads the .env file that we create 
+You want to require the dotenv early on in order to give your hidden codes to the entire program
+use .config() to initialize them right away 
+
+require ('dotenv).config()
+
+.env
+We are going to move the entire atlas URL into the .env file since it includes our password
+You can place any other hidden values in here too if you want to list users or passwords separately 
+
+Using .env
+Once initialized you use it the same as usual
+process.env.MONGOURI
+
+Schema
+Schema is a built in method using mongoose that we build to make sure every document is exactly the same
+To define a schema we need to predefine the name and the data type
+This should all go into a models folder
+
+Schema Code
+new mongoose.schema({})
+    This defines a schema object that declares the document variables
+mongoose.model(var, schema)
+    Assigns the schema to a variables that we can use in the server
+
+Why Schema
+By defining a schema we are essentially filitering our results into a common form
+If there is extra information given in the body we wont post it and it gives up data verification from the start
+
+Some Important Options
+Schema lets us define optional parameters for our data here are some of the biggest
+Type
+    Lets you define the data type
+Required
+    Marks that data as required
+Trim
+    Removes white space
+Default
+    If the value is not included in the post is will be added with this default value
+    
