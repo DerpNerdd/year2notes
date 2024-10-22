@@ -324,3 +324,15 @@ Controllers
 Controllers are created to deal with functions and are then passed to the router
 This is the final step in creating clean, easy to navigate code for a server
 Since the controller will handle the req, res callback function we can now nicely arrange our routes into easy to read methods
+
+Mongoose Query objects
+Mongoose has a built-in query langyage that allows you to search a collection more efficiently
+
+Model.find()
+Find is similar to filter in js and will return all of the code that mathces the query
+For instance:
+    Model.find({completed: true})
+    Will return all of the documents that have been completed
+By filling find() with an empty object we are able to get all of the documents since every document is an object they all match 
+Lets use this on the getAllTasks() function
+
