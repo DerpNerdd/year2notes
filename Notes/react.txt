@@ -1,0 +1,22 @@
+React
+
+How to Start
+Creating a react app is a large task that we can use toolchains to do for us
+There are a lot of toolchains that serve different purposes but here are the biggest ones
+    Create React App
+    Next.js 
+    Vue 
+    Gatsby 
+    Parcel 
+
+History of React 
+React was first developed by Facebook and released an an open-source project in 2013. Over the years, it has gained widespread adoption in the web development community due to its simplicity, performance, and flexibility. React is maintained by Facebook and a community of developers, and it has gone through several major versions, with React 18 being the latest at the time of this lesson.
+
+Uses of React
+React is widely used in web development for creating interactive and dynamic user interfaces. It is particularly suitable for single-page applications (SPAs), but can be used in various contexts, including:
+    Websites: React is used to build modern, responsive websites with interactive features 
+    Web Applications: Many web applications, such as social media platforms, content management systems, and e-commerce sites, use React for its performance and flexibility. 
+    Mobile Apps: React Native, a framework based on Ract, is used for developing cross-platform mobile applications for iOS and Android
+    Interactive Dashboards: Reach is well-suited for building data visualization and interactive dashboard applications
+    Games: Some web-based games are built using React for their user interfaces 
+
