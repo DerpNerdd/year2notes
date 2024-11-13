@@ -1,22 +1,30 @@
 {
-  "name": "03-task-manager",
+  "name": "pet-adoption",
+  "description": "Pet-Adoption Website",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  },
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "nodemon": "^3.1.7"
+  "repository": {
+    "type": "git",
+    "url": "github.com/NoelleWeaver/Pet-Adoption"
   },
+  "author": "Alan Sanchez, Noelle Weaver",
+  "license": "MIT",
   "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.7",
     "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
     "express": "^4.21.1",
-    "mongoose": "^8.7.2"
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.7.3",
+    "nodemailer": "^6.9.15",
+    "router": "^1.3.8"
   }
 }
- 
