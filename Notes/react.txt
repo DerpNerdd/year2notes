@@ -20,3 +20,37 @@ React is widely used in web development for creating interactive and dynamic use
     Interactive Dashboards: Reach is well-suited for building data visualization and interactive dashboard applications
     Games: Some web-based games are built using React for their user interfaces 
 
+Intro to .jsx
+JSX stands for javascript expressions and runs perfectly fine in a .JS file too
+This language allows us to type HTML style code in a JS format
+The biggest advantage is allowing us to do calculations or conditional checking alongside the page rendering
+When you are creating components or anything that is rendered with the index.js file you can instead of .jsx 
+.jsx should only be used with files that are capitalized
+You can use JS or JSX but the benefit to JSX is the use of emmet and auto-fill of the HTML elements
+
+The way to use code in JSX is surrounding it in { curly brackets }
+This informs the code to treat everything inside of the brackets as regular JS
+If you want anything to render then you need to "return" it from the component function
+Lastly, just like js, when you return something the code stops
+
+Intro to components
+React is written in .jsx, this is a special form of HTML
+Components are differentiated from the rest of the html tags by using capitals
+Components can be used for anything that you want to partition into small and managable platforms
+
+Creating new components 
+When creating components it is best that they are named singular nouns, Book, Header, Item, Button, etc. 
+Components should also be kept in a components folder in the .src folder 
+
+Parts of a component
+Imports
+    Typically useState, useEffect, or other react hooks 
+Arrow function
+    This is the name of the component and will also hold any props that are passed down 
+
+Any States, functions, variables
+    Before the return the react component you can define any js you want to use
+The return statement 
+    This will house what you want to be rendered into HTML
+Export Components
+    This just sends off the react components to the dom renderer
