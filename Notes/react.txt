@@ -54,3 +54,25 @@ The return statement
     This will house what you want to be rendered into HTML
 Export Components
     This just sends off the react components to the dom renderer
+
+Importing Components
+Once you have created your components you need to import them on the main app page
+You can rename them if you like by using the 'as' keyword
+
+Using Components
+When you want to use a component you type it out just like a regular HTML tag but you must use a capital letter
+Capital letters let the react library know to compile the code
+Lastly remember that you always need to close all of your react components 
+<Form /> or <Movies />
+
+UseState 
+const [state, setState] = useState(initialState)
+useState stores a value and returns it to the user similar to a variable 
+setState(newState)
+updating using setState causes a re-render of your page
+
+Setting Styles
+Lastly, there will be times when you need to use js to pass objects, it ins important to remember that requires a double bracket {{}}
+One of the most ocmmon instances of this is css styles and props
+style = {{color: blue, fontSize: '40px}}
+
