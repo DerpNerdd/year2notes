@@ -76,3 +76,46 @@ Lastly, there will be times when you need to use js to pass objects, it ins impo
 One of the most ocmmon instances of this is css styles and props
 style = {{color: blue, fontSize: '40px}}
 
+Introduction to props
+Props (short for properties) are any setting or value that is attached to a component
+These are most used to pass values down the line but can also be used just like HTML element properties
+
+Props
+You can give these props any name and any value
+The better you name it the more useful it will be 
+
+<Question
+    key = {data.id}
+    title = {data.title}
+    info = {data.info}
+/>
+
+const Question = ({ title, info }) => {}
+
+Destructuring Props
+If you have a lot of information you can destructure your props to save you some space:
+
+<Question
+    key = {data.id}
+    {...data}
+/>
+
+const Question = ({ title, info }) => {}
+
+Mapping Arrays
+{questions.map((question) => {
+    return (
+        <Question key={question.key} {...question} />
+    );
+})}
+
+In this example we have several items in the questions state and we can loop through all of them, returning a <Question/> component for each one 
+
+Using Props
+Using Props once they are passed down is as simple as adding the name of the prop to the component parameters
+We use { ... } to immediately deconstruct it for use in the component
+
+const List = ({ people, name, id, info }) => {}
+
+Now that we have accepted these props we are able to use them as variables
+This is especially important when we are mapping and using the same variables for several different values 
