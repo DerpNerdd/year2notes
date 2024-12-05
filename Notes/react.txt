@@ -119,3 +119,39 @@ const List = ({ people, name, id, info }) => {}
 
 Now that we have accepted these props we are able to use them as variables
 This is especially important when we are mapping and using the same variables for several different values 
+
+Hooks 
+Introdunction to Hooks 
+React is only re-rendered when told to, in react 16.7 and older you had to write these function
+Since React 16.8 there are build in hooks that you can use without creating your own functions 
+
+What is a hook?
+Hooks are just special functions that are built into react that let you 'hook' into the react features
+Every hook in React must start with a lowercase 'use'
+    useState
+    useEffect
+    useContext
+
+useEffect 
+
+useEffect() is a function that will run anytime a re-render happens
+This is especially helpful when pulling data from a server and we want to make sure that the data is up to date on render
+
+useEffect(() => {
+    effect 
+    return () => {
+        cleanup
+    }
+}, [input])
+
+useEffect runs off a certain chunk of code every rerender, most often that chunk is a function 
+The 'effect' is the js code that runs when you render
+
+The effect that is created is permanent and will stack over and over 
+We can use a cleanup function that removes any left behind events 
+
+NOTE: This is not required for every effect, only use when needed 
+
+The input array can be used to choose specific state changes that will cause this effect instead of every render 
+You can also leave it empty to have the effect happen only once
+
