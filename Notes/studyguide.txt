@@ -1,0 +1,98 @@
+
+Study Guide: Full-Stack Development Topics
+-------------------------------------------
+
+Netlify and Render
+- Netlify: A platform for hosting front-end applications, offering easy deployment, CI/CD pipelines, and serverless functions. Ideal for static sites.
+- Render: A full-stack cloud hosting platform. It supports server-side apps, databases, and static sites. Great for deploying Node.js apps with built-in support for custom domains and SSL.
+
+Server Codes
+- 100s: Informational responses (e.g., 100 Continue, 101 Switching Protocols).
+- 200s: Success (e.g., 200 OK, 201 Created).
+- 300s: Redirection (e.g., 301 Moved Permanently, 304 Not Modified).
+- 400s: Client Errors (e.g., 400 Bad Request, 404 Not Found).
+- 500s: Server Errors (e.g., 500 Internal Server Error, 503 Service Unavailable).
+
+Third-Party Imports
+- Third-party imports involve including libraries or modules from external sources. This is done via package managers like npm or yarn.
+  Example in Node.js:
+  const express = require('express');
+  Example in React:
+  import React from 'react';
+- Always include dependencies in the `package.json` file to ensure compatibility during deployment.
+
+Hooks: useEffect and useState
+- **useState**:
+  - Manages state variables in functional components.
+  ```javascript
+  const [count, setCount] = useState(0);
+  setCount(count + 1);
+  ```
+- **useEffect**:
+  - Handles side effects in components such as fetching data or subscriptions.
+  ```javascript
+  useEffect(() => {
+    console.log('Component mounted');
+  }, [dependency]);
+  ```
+
+Routes
+- Define endpoints for handling HTTP requests.
+- Example:
+  ```javascript
+  const express = require('express');
+  const router = express.Router();
+  router.get('/api/data', (req, res) => res.send('Data fetched'));
+  module.exports = router;
+  ```
+
+Controllers
+- Encapsulate logic for routes. They manage request-response handling.
+- Example:
+  ```javascript
+  const fetchData = (req, res) => {
+    res.send('Hello World');
+  };
+  module.exports = { fetchData };
+  ```
+
+Components
+- Modular and reusable UI building blocks in React. Ensure single responsibility.
+- Example:
+  ```javascript
+  function Greeting({ name }) {
+    return <h1>Hello, {name}!</h1>;
+  }
+  export default Greeting;
+  ```
+
+Paths
+- Essential for linking and structuring applications.
+  - **Relative paths**: Navigate file hierarchies (`../file.js`).
+  - **Absolute paths**: Specify complete routes in the project (`/home/user/app`).
+  - In React:
+  ```javascript
+  import Home from './components/Home';
+  ```
+
+MongoDB Questions
+- Collections: Groups of JSON-like documents.
+- Schema: Enforce consistent document structure using Mongoose.
+  ```javascript
+  const userSchema = new mongoose.Schema({
+    name: String,
+    email: { type: String, required: true },
+  });
+  ```
+- Use `.env` for database credentials.
+
+Components Recap
+- Modular, reusable UI elements. Ensure single responsibility per component.
+- Use props for passing data:
+  ```javascript
+  function Greeting({ name }) {
+    return <h1>Hello, {name}!</h1>;
+  }
+  ```
+
+-------------------------------------------
