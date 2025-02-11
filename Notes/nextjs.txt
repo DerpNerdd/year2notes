@@ -1,0 +1,27 @@
+What is NEXT.JS?
+
+NextJs is an open-source web development React-based framework created by Vercel, which is famous for its unique features such as Server-side rendering and enhanced SEO. It has some additional features such as data fetching utilities, dynamic API routes, optimized builds, etc. It is a framework built upon React, Webpack, and Babel.
+
+Why Next.Js?
+    - Has built in routing and server-side rendering, which solves a lot of the problems we often face when working with react
+    - No more react-router-dom
+    - NextJS gives us smooth routhing right out of the box
+    - NextJS helps deal with slow rendering and loading times that can happen with client-side rendering
+    - NextJS boosts how efficient we can be in development and enhances the experience for our users 
+
+Major Benefits of NextJS
+    - Built in Routing and Server-side rendering: Next.js offers built-in routing and server-side rendering, addressing common issues encountered in web development
+    - Seamless Integration with React: As Next.js is derived from React, developers already familiar with React can quickly adapt to Next.js without a steep learning curve
+    - Performance Optimization: Next.ks helps mitigate slow rendering and loading times inherent in client-side rendering
+    - Enhanced Development Efficiency: With features like server-side rendering integrated into Next.js, developers can focus more on building features and less on configuring complex setups.
+    - Improved SEO Performance: Server-side rendering provided by Next.js contributes to better SEO performance by delivering pre-rendered HTML to search engine crawlers.
+    - Active Community and Support: Next.js benefits from a thriving community of developers and extensive documentation, prociding ample resources for learning and troubleshooting
+
+Folder Structure:
+    - /app: Contains all the routes, components, and logic for your application, this is where you'll be mostly working from
+    - /app/lib: Contains functions used in your application, such as reusable utility functions and data fetching functions
+    - /app/ui: Contains all the UI components for your application, such as cards, tables, and forms. To save time, we've pre-styled these components for you
+    - /public: Contains all the static assets for your application, such as images
+    - /scripts: Contains a seeding script that you'll use to populate your database in a later chapter
+    - Config Files: You'll also notice config files such as next.congig.js at the root of your application. Most of these files are created and pre-configured when you start a new project using create-next-app. You will not need to modify them in this course
+
