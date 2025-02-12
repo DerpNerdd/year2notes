@@ -25,3 +25,44 @@ Folder Structure:
     - /scripts: Contains a seeding script that you'll use to populate your database in a later chapter
     - Config Files: You'll also notice config files such as next.congig.js at the root of your application. Most of these files are created and pre-configured when you start a new project using create-next-app. You will not need to modify them in this course
 
+Global Styling
+If you look inside the /app folder, you'll see a file called global.css. You can use this file to add CSS rules to all the routes in your application, such as CSS reset rules, site-wide styles for HTML elements like links and more.
+You can import global.css in any component in your application, but it is usually good practice to add it to your top-level component. In Next.js, this is the root layout
+
+CSS framework
+    - Tailwind CSS
+    - ReactBootstrap
+    - MaterializeCSS 
+    - Bulma
+    - Pure.css
+    - UIkit
+
+CSS Modules
+CSS Modules allow you to scope CSS to a component by automatically creating unique class names, so you don't have to worry about style collisions as well
+
+Font
+Next.js automatically optimizes fonts in the application when you use the next/font module. It downloads font files at build time and hots them with your other static assets. This means when a user visits your application, there are no additional network requests for fonts which would impact performance
+
+What is the App Folder/router
+Tree: A convention for visualizing a hierarchical structure. For example, a component tree with parent and children components, a folder structure, etc.
+Subtree: Part of a tree, starting at a new root (first) and ending at the leaves (last)
+Root: The first node in a tree or subtree, such as a root layout
+Leaf: Nodes in a subtree that have no children, such as the last segment in a URL path
+
+The New Index.js -> page.js
+
+A Page is UI that is unique to a route. You can define a page by default exporting a component from a page.js file
+For example, to create your index page, add the page.js file inside the app directory
+
+To make more pages
+
+Then, to create further pages, create a new folder and add the page.js file inside it. For example, to create a page for the /dashboard route, create a new folder called dashboard, and add the page.js file inside it 
+
+Page Rules -> Layout.Js
+A root layout.js file is required in the app folder next to page.js
+A layout is UI that is shared between multiple routes. On navigation, layouts preserve state, remain interactive, and do not re-render. Layouts can also be nested. You can have an individual layout.js for each page by creating a seperate layout.js inside the page folder
+
+Metadata
+In the app directory, you can modify the <head> HTML elements such as title and meta using the Metadata APIs
+Metadata can be defined by exporting a metadata object or generateMetadata function in a layout.js
+
