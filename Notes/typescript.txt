@@ -1,0 +1,66 @@
+TypeScript: Super javascript
+
+JS is a Subset of TypeScript
+All JS is TS but not all TS is JS 
+
+Benefits:
+    - Static Typing
+    - Code Completion 
+    - Refactoring
+    - Shorthand notations
+
+Type of Languages
+
+Statically-Typed
+(C++, C#, Java)
+    int number = 10
+    number = "a"** Error immediately before having to compile to find out
+
+Dynamically-Typed
+(Javascript, Python, Ruby)
+    let number = 10
+    number = "a"
+
+    Math.round(number) **Would pass the emit code check but error when it runs which sucks
+
+TypeScript: Just JS with Type Casting AKA OOP Principles and much more
+
+Pros:
+    - Insane Scalability
+    - Ability to use featureas JS can't in JS applications
+    - Allows for better maintenance/changes for the lifetime of the application 
+
+Cons:
+    - Always have to compile (transpilation)
+    - Stricter Coding Style 
+    - Technically more typing 
+
+Why you should use TypeScript:
+    - Research has shown that TypeScript can spot 15% of common bugs
+    - Readability- It is easier to see what the code is supposed to do. And when working in a team, it is easier to see what the other developers intended
+    - It's popular - knowing TypeScript will enable you to apply to more good jobs
+    - Learning TypeScript will give you a better understanding, and a new perspective, on Javascript
+    - Addresses the shortcomings of Javascript
+
+Why you shouldn't use TypeScript:
+    - TypeScript takes longer to write than JavaScript, as you have to specify types, so for smaller solo projects it might not be worth using it
+    - TypeScript has to be compiled - which can take time, especially in larger projects 
+
+    BUTTT.... 
+
+    But the extra time that you have to spend writing more precise code and compiling will be more than saved by how many fewer bugs you'll have in your code
+    
+    For many projects - especially medium to large projects - TypeScript will save you lots of time and headaches
+
+    And if you already know JavaScript, TypeScript will not be hard to learn
+
+4 Ways to Compile:
+Use the following commands in the terminal
+1. For specific file
+    - tsc [name of file] Ex. tsc index
+2. For all files in the terminal folder (BEST OPTION)
+    - tsc 
+3. If you want a specific name 
+    - tsc index.js --outline file-name.js
+4. Have the file watched like SASS
+    - tsc index.ts -w
