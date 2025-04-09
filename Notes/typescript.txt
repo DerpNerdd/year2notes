@@ -64,3 +64,220 @@ Use the following commands in the terminal
     - tsc index.js --outline file-name.js
 4. Have the file watched like SASS
     - tsc index.ts -w
+
+Watch Mode
+There is built in watch mode, similar to nodemon that will compile every time a change is made and saved
+    tsc app.ts -w //watches app.ts
+    tsc -w //watches files in dir 
+
+Initialize to TS
+To configure your ts compiler then you need to create the config file using:
+    npx tsc -init
+
+Config Options
+There are many many options, the few that we will cover are the ones that I think you have the most chance to actually use the future 
+
+Config Options
+
+"target" : "ES2016",
+This states the target level of JS that you want the ts to compile down to
+"ES6" is what you likely want to be using but if you want to be EXTRA sure then you can use ES5
+
+The lib option has a bunch of different libraries pre-installed that you can add but there is no reason for us to mess with this option right now
+In the future, you will likely be adding new libraries to this options 
+
+Source map creates a file that allows you to debug your TS file using the JS file
+Basically, it creates a map while compiling that tells the run time where the js lines are created from when using the ts files
+
+"outDir" : "./",
+outDir defines where the js files should be placed when they are done being compiled
+By default they are in the same directory as the ts file but you are able to place them in a different directory
+
+"rootDir" : "./",
+Tells the compiler where to look when finding files to compile
+By default it is in the root directory where you are running the init/watch command
+
+"noEmitOnError" : true,
+Typically when there is a type error the terminal will let you know but the file will still compile
+If you enable this setting then the JS will not be created if there are ANY errors in the code
+
+"strict" : true,
+This makes sure you are trying clear and concise code and shows error if you dont
+When strict is true, it activates every option below it, you are able to set this false if you want to customize the strict options yourself
+
+When creating a program using TS you not want to push the TS files AND the JS files since they are essentially the same thing
+You should always have *.js in your gitignore from now on
+
+Let and const
+ES6
+    Uses let and const to define variables in different Ways
+ES5
+    Only uses var to define variables 
+
+Arrow functions
+ES6
+    Arrow functions are just a shorter way to define functions and make callback functions much easier to use
+ES5
+    Uses the keyword function to create functions
+
+Default Function Params 
+ES6
+    You are able to define a default value for function parameters, if the value is not defined it will automatically fill in a value
+ES5
+    You define the value in the function if the value was not defined
+
+Spread Operator
+ES6
+    Adding ... before an iterable object will add each item from that object individually
+ES5
+    The items are added to a temporary variables one at a time using a for loop
+
+Rest parameters
+ES6
+    Allows the use of ... in the parameters to create an array from all the items in the parameters
+ES5 
+    Functions are created with an 'arguments' value that you can loop through with a for loop
+
+Destructuring
+ES6
+    Multiple variables can be defined at once using destructuring for arrays or objects
+ES5
+    Each needs to be defined by hand
+
+One last thing..
+Sometimes there will be errors when importing libs or using the DOM
+You can ignore errors like this by using the !
+This should only be used when you KNOW that the error is covered and proper
+
+TS types
+TS is microsoft's attempt to push JS in a more object oriented direction
+One big step to doing that is adding types to the variables and objects
+You can add a type to any variable by placing colons, :, after it
+
+Basic types
+    number
+    String
+    boolean
+    {} = object
+    [] = array
+    {'str1', 'str2', ...} = enum
+        Defines allowed values in a variable
+    [string, number] = tuple
+        Defines allowed types in order in an array
+    
+Types - variables
+Adding types to variables is very easy, everytime you create one just add a colons
+    let name: string = 'Jimmy';
+    let appId: number - 12345;
+
+Because of our settings they will not allow implicit 'any' types, which will help you know when to do it while starting out 
+
+Types - functions
+The parameters in a function should be given types to avoid errors while developing
+
+function add (n1: number, n2: number) {
+    return n1 + n2;
+}
+
+It is also a good idea to add a type for the output of a function
+
+function printResult (num: number) : number {
+    console.log('Result: ' + num);
+    return num 
+}
+
+const addArrow = (n1:number, n2:number): number => n1 + n2
+
+const printResult = (num: number): void => {
+    console.log('Result: ' + num);
+}
+
+Void is a common phase meaning nothing is being returned
+
+Types - objects & arrays
+
+Just like modeling with Mongoose, we are able to model objects using type Casting
+
+let person: {
+    name: string;
+    age: number;
+    hobbies: string[];
+    role: [number, string];
+}
+
+Objects can be typecast inside of another type casted object:
+
+let product: {
+    id: string;
+    price: number;
+    tags: string[];
+    details: {
+        title: string;
+        description: string;
+    }
+}
+
+const zoo: {
+    animal: string;
+    population: number;
+    diets: string[];
+    id: [number, string];
+}
+
+Type - enum
+
+To create an enumerated list use the keyword enum followed by an object of human readable values and the behind the scenes values they represent 
+
+enum Role {
+    ADMIN = "ADMIN";
+    READ_ONLY: 0;
+    AUTHOR = 100;
+}
+
+The largest advantage for enum is the consistency
+If we create a Role enum, then everywhere we use that role in the future it is guarenteed to have the same value, 0 or "admin"
+
+The other advantages is storage size
+We are able to give roles using numbers to save space, while using enums to create human readable code
+
+Types - any (not the best idea)
+
+There is a unique type that we have talked about before called any
+Just like it sounds, any, can be any data type
+
+Types - unions
+
+Variables can accept more than one type for instance a function may take a number or a string
+
+That can be defined with a vertical line
+
+let result: string | number;
+
+Types - aliases
+
+If a union type is going to be used often then it is more useful to create a custom type called an alias by using the 'type' keyword
+
+type Combinable = number | string;
+
+Remember: Custom classes are capital
+
+An object alias can also be created so that a several functions can all use the same type, creating consistency in your code
+
+type User = { name: string; age: number };
+
+function greet(user: User) {
+    console.log("Hi, I am " + user.name);
+}
+
+function isOlder(user: User, checkAge: number) {
+    return checkAge > user.age;
+}
+
+Types - function types
+
+TS is also able to store entire functions as aliases
+
+let add: (a: number, b: number) => number;
+
+The arrow is used to define the type of the returned value
+
