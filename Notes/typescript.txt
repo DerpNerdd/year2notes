@@ -372,3 +372,34 @@ class Employee extended Person {
 }
 
 let emp: Person = new Employee("James", 100);
+
+
+Getters and setters
+
+These are very common methods in classes that allow you to change values in the class that are otherwise protected
+Normally there is some kind of validation that you are allowed to change that value but it doesnt need to have that
+To create them use the get/set keywords
+
+get mostRecentReport() {
+    if (this.lastReport) {
+        return this.lastReport
+    }
+    throw new Error('No report found')
+}
+
+set mostRecentReport(value:string){
+    if (!value){
+        throw new Error('Please pass a valid value!')
+    }
+    this.addReport(value);
+}
+
+Interface
+
+An interface is a description of an obkject, including values and methods
+They are very similar to types but work better with classes in particular
+Interfaces are always capitalized
+
+This is a great way to be sure that an object is guarenteed to have a method or and what the method is going to return
+This avoids errors in large projects where an object may be used over several files, ensuring that they have the required values and methods
+
