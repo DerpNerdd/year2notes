@@ -10,3 +10,12 @@ function add(n1, n2) {
 console.log(add(1312, 313213));
 let result;
 result = 213;
+class Employee {
+    constructor() {
+        this.empCode = 12;
+        this.empName = "Bob"; //public is default
+    }
+}
+let emp = new Employee();
+emp.empCode = 123; //OK
+emp.empName = "Swati"; //OK
